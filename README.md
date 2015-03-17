@@ -1,4 +1,5 @@
 # Bootcamp
+[![Build Status](https://travis-ci.org/Jared-Prime/bootcamp.png)](https://travis-ci.org/Jared-Prime/bootcamp)
 Exercise solutions for *Go Bootcamp* text.
 
 ## Learning goals
