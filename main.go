@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/Jared-Prime/bootcamp/pkg/exercise"
+	"github.com/Jared-Prime/bootcamp/exercise"
 )
 
 func main() {
