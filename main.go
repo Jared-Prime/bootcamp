@@ -6,9 +6,8 @@ import (
 )
 
 func main() {
-	p := exercise.Player{}
-	p.Id = 42
-	p.Name = "Jared"
-	p.Location = "Chicago"
+	p := exercise.Player{
+		&exercise.User{Id: 42, Name: "Jared", Location: "Chicago"},
+		1234}
 	fmt.Println(p.Greetings())
 }
