@@ -1,0 +1,421 @@
+
+before (*T).DoSomeWork
+after walk (*T).DoSomeWork
+
+before RunExample
+.   DCL l(15)
+.   .   NAME-internals.t u(1) a(1) g(1) l(15) x(0+0) class(PAUTO) f(1) ld(1) tc(1) used(1) PTR64-*internals.T
+
+.   AS l(15) colas(1) tc(1)
+.   .   NAME-internals.t u(1) a(1) g(1) l(15) x(0+0) class(PAUTO) f(1) ld(1) tc(1) used(1) PTR64-*internals.T
+.   .   PTRLIT l(15) esc(no) ld(1) tc(1) PTR64-*internals.T
+.   .   .   STRUCTLIT l(15) tc(1) internals.T
+.   .   .   .   TYPE <S> l(15) tc(1) implicit(1) type=PTR64-*internals.T PTR64-*internals.T
+
+.   DCL l(16)
+.   .   NAME-internals.i u(1) a(1) g(2) l(16) x(0+0) class(PAUTO) f(1) ld(1) tc(1) used(1) internals.I
+
+.   AS l(16) tc(1)
+.   .   NAME-internals.autotmp_0000 u(1) a(1) l(16) x(0+0) class(PAUTO) esc(N) tc(1) used(1) PTR64-*internals.T
+.   .   NAME-internals.t u(1) a(1) g(1) l(15) x(0+0) class(PAUTO) f(1) ld(1) tc(1) used(1) PTR64-*internals.T
+
+.   AS l(16) colas(1) tc(1)
+.   .   NAME-internals.i u(1) a(1) g(2) l(16) x(0+0) class(PAUTO) f(1) ld(1) tc(1) used(1) internals.I
+.   .   CONVIFACE l(16) tc(1) internals.I
+.   .   .   NAME-internals.autotmp_0000 u(1) a(1) l(16) x(0+0) class(PAUTO) esc(N) tc(1) used(1) PTR64-*internals.T
+
+.   VARKILL l(16) tc(1)
+.   .   NAME-internals.autotmp_0000 u(1) a(1) l(16) x(0+0) class(PAUTO) esc(N) tc(1) used(1) PTR64-*internals.T
+
+.   PRINT l(17) tc(1)
+.   PRINT-list
+.   .   NAME-internals.i u(1) a(1) g(2) l(16) x(0+0) class(PAUTO) f(1) ld(1) tc(1) used(1) internals.I
+after walk RunExample
+.   DCL l(15)
+.   .   NAME-internals.t u(1) a(1) g(1) l(15) x(0+0) class(PAUTO) f(1) ld(1) tc(1) used(1) PTR64-*internals.T
+
+.   AS-init
+.   .   AS l(15) tc(1)
+.   .   .   NAME-internals.autotmp_0002 u(1) a(1) l(15) x(0+0) class(PAUTO) esc(N) tc(1) used(1) internals.T
+
+.   .   AS l(15) tc(1)
+.   .   .   NAME-internals.autotmp_0001 u(1) a(1) l(15) x(0+0) class(PAUTO) esc(N) tc(1) used(1) PTR64-*internals.T
+.   .   .   ADDR u(2) l(15) tc(1) PTR64-*internals.T
+.   .   .   .   NAME-internals.autotmp_0002 u(1) a(1) l(15) x(0+0) class(PAUTO) esc(N) tc(1) used(1) internals.T
+
+.   .   AS u(2) l(15) tc(1)
+.   .   .   IND u(2) l(15) tc(1) internals.T
+.   .   .   .   NAME-internals.autotmp_0001 u(1) a(1) l(15) x(0+0) class(PAUTO) esc(N) tc(1) used(1) PTR64-*internals.T
+.   AS u(100) l(15) tc(1)
+.   .   NAME-internals.t u(1) a(1) g(1) l(15) x(0+0) class(PAUTO) f(1) ld(1) tc(1) used(1) PTR64-*internals.T
+.   .   NAME-internals.autotmp_0001 u(1) a(1) l(15) x(0+0) class(PAUTO) esc(N) tc(1) used(1) PTR64-*internals.T
+
+.   DCL l(16)
+.   .   NAME-internals.i u(1) a(1) g(2) l(16) x(0+0) class(PAUTO) f(1) ld(1) tc(1) used(1) internals.I
+
+.   AS u(2) l(16) tc(1)
+.   .   NAME-internals.autotmp_0000 u(1) a(1) l(16) x(0+0) class(PAUTO) esc(N) tc(1) used(1) PTR64-*internals.T
+.   .   NAME-internals.t u(1) a(1) g(1) l(15) x(0+0) class(PAUTO) f(1) ld(1) tc(1) used(1) PTR64-*internals.T
+
+.   AS-init
+.   .   AS l(16) tc(1)
+.   .   .   NAME-internals.autotmp_0003 u(1) a(1) l(16) x(0+0) class(PAUTO) esc(N) tc(1) used(1) PTR64-*uint8
+.   .   .   NAME-go.itab.*"".T."".I u(1) a(1) l(16) x(0+0) class(PEXTERN) tc(1) used(1) PTR64-*uint8
+
+.   .   IF l(16) tc(1)
+.   .   IF-test
+.   .   .   EQ l(16) tc(1) bool
+.   .   .   .   NAME-internals.autotmp_0003 u(1) a(1) l(16) x(0+0) class(PAUTO) esc(N) tc(1) used(1) PTR64-*uint8
+.   .   .   .   LITERAL-nil u(1) a(1) l(16) tc(1) PTR64-*uint8
+.   .   IF-body
+.   .   .   AS l(16) tc(1)
+.   .   .   .   NAME-internals.autotmp_0003 u(1) a(1) l(16) x(0+0) class(PAUTO) esc(N) tc(1) used(1) PTR64-*uint8
+.   .   .   .   CALLFUNC u(100) l(16) tc(1) PTR64-*byte
+.   .   .   .   .   NAME-runtime.typ2Itab u(1) a(1) l(2) x(0+0) class(PFUNC) tc(1) used(1) FUNC-funcSTRUCT-(FIELD-
+.   .   .   .   .   .   NAME-runtime.typ·2 u(1) a(1) l(2) x(0+0) class(PPARAM) f(1) PTR64-*byte PTR64-*byte, FIELD-
+.   .   .   .   .   .   NAME-runtime.typ2·3 u(1) a(1) l(2) x(8+0) class(PPARAM) f(1) PTR64-*byte PTR64-*byte, FIELD-
+.   .   .   .   .   .   NAME-runtime.cache·4 u(1) a(1) l(2) x(16+0) class(PPARAM) f(1) PTR64-*PTR64-*byte PTR64-*PTR64-*byte) PTR64-*byte
+.   .   .   .   CALLFUNC-list
+.   .   .   .   .   AS u(2) l(16) tc(1)
+.   .   .   .   .   .   INDREG-SP a(1) l(16) x(0+0) tc(1) runtime.typ·2 G0 PTR64-*byte
+.   .   .   .   .   .   ADDR u(2) a(1) l(16) tc(1) PTR64-*uint8
+.   .   .   .   .   .   .   NAME-type.*"".T u(1) a(1) l(11) x(0+0) class(PEXTERN) tc(1) uint8
+
+.   .   .   .   .   AS u(2) l(16) tc(1)
+.   .   .   .   .   .   INDREG-SP a(1) l(16) x(8+0) tc(1) runtime.typ2·3 G0 PTR64-*byte
+.   .   .   .   .   .   ADDR u(2) a(1) l(16) tc(1) PTR64-*uint8
+.   .   .   .   .   .   .   NAME-type."".I u(1) a(1) l(16) x(0+0) class(PEXTERN) tc(1) uint8
+
+.   .   .   .   .   AS u(2) l(16) tc(1)
+.   .   .   .   .   .   INDREG-SP a(1) l(16) x(16+0) tc(1) runtime.cache·4 G0 PTR64-*PTR64-*byte
+.   .   .   .   .   .   ADDR u(2) a(1) l(16) tc(1) PTR64-*PTR64-*uint8
+.   .   .   .   .   .   .   NAME-go.itab.*"".T."".I u(1) a(1) l(16) x(0+0) class(PEXTERN) tc(1) used(1) PTR64-*uint8
+.   AS u(100) l(16) tc(1)
+.   .   NAME-internals.i u(1) a(1) g(2) l(16) x(0+0) class(PAUTO) f(1) ld(1) tc(1) used(1) internals.I
+.   .   EFACE u(2) l(16) tc(1) internals.I
+.   .   .   NAME-internals.autotmp_0003 u(1) a(1) l(16) x(0+0) class(PAUTO) esc(N) tc(1) used(1) PTR64-*uint8
+.   .   .   NAME-internals.autotmp_0000 u(1) a(1) l(16) x(0+0) class(PAUTO) esc(N) tc(1) used(1) PTR64-*internals.T
+
+.   VARKILL l(16) tc(1)
+.   .   NAME-internals.autotmp_0000 u(1) a(1) l(16) x(0+0) class(PAUTO) esc(N) tc(1) used(1) PTR64-*internals.T
+
+.   EMPTY-init
+.   .   CALLFUNC u(100) l(17) tc(1)
+.   .   .   NAME-runtime.printiface u(1) a(1) l(2) x(0+0) class(PFUNC) tc(1) used(1) FUNC-funcSTRUCT-(FIELD-internals.I)
+.   .   CALLFUNC-list
+.   .   .   AS u(1) l(17) tc(1)
+.   .   .   .   INDREG-SP a(1) l(17) x(0+0) tc(1) internals.I
+.   .   .   .   NAME-internals.i u(1) a(1) g(2) l(16) x(0+0) class(PAUTO) f(1) ld(1) tc(1) used(1) internals.I
+.   EMPTY u(100) l(17) tc(1)
+
+before I.DoSomeWork
+.   CALLINTER l(20) tc(1)
+.   .   DOTINTER l(20) x(0+0) tc(1) FUNC-methodSTRUCT-(FIELD-PTR64-*STRUCT-struct {}) funcSTRUCT-()
+.   .   .   NAME-internals..this u(1) a(1) g(1) l(20) x(0+0) class(PPARAM) f(1) tc(1) used(1) internals.I
+.   .   .   NAME-internals.DoSomeWork u(1) a(1) l(20) x(0+0)
+after walk I.DoSomeWork
+.   CALLINTER u(100) l(20) tc(1)
+.   .   DOTINTER u(2) l(20) x(0+0) tc(1) FUNC-methodSTRUCT-(FIELD-PTR64-*STRUCT-struct {}) funcSTRUCT-()
+.   .   .   NAME-internals..this u(1) a(1) g(1) l(20) x(0+0) class(PPARAM) f(1) tc(1) used(1) internals.I
+.   .   .   NAME-internals.DoSomeWork u(1) a(1) l(20) x(0+0)
+"".(*T).DoSomeWork t=1 size=16 value=0 args=0x8 locals=0x0
+	0x0000 00000 (internals/interfaces.go:11)	TEXT	"".(*T).DoSomeWork+0(SB),4,$0-8
+	0x0000 00000 (internals/interfaces.go:11)	NOP	,
+	0x0000 00000 (internals/interfaces.go:11)	NOP	,
+	0x0000 00000 (internals/interfaces.go:11)	FUNCDATA	$0,gclocals·519efd86263089ddb84df3cfe7fd2992+0(SB)
+	0x0000 00000 (internals/interfaces.go:11)	FUNCDATA	$1,gclocals·3280bececceccd33cb74587feedb1f9f+0(SB)
+	0x0000 00000 (internals/interfaces.go:12)	RET	,
+	0x0000 c3                                               .
+"".RunExample t=1 size=160 value=0 args=0x0 locals=0x40
+	0x0000 00000 (internals/interfaces.go:14)	TEXT	"".RunExample+0(SB),$64-0
+	0x0000 00000 (internals/interfaces.go:14)	MOVQ	(TLS),CX
+	0x0009 00009 (internals/interfaces.go:14)	CMPQ	SP,16(CX)
+	0x000d 00013 (internals/interfaces.go:14)	JHI	,22
+	0x000f 00015 (internals/interfaces.go:14)	CALL	,runtime.morestack_noctxt(SB)
+	0x0014 00020 (internals/interfaces.go:14)	JMP	,0
+	0x0016 00022 (internals/interfaces.go:14)	SUBQ	$64,SP
+	0x001a 00026 (internals/interfaces.go:14)	FUNCDATA	$0,gclocals·0115f8d53b75c1696444f08ad03251d9+0(SB)
+	0x001a 00026 (internals/interfaces.go:14)	FUNCDATA	$1,gclocals·61e2515c69061b8fed0e66ece719f936+0(SB)
+	0x001a 00026 (internals/interfaces.go:15)	MOVQ	$0,"".autotmp_0002+32(SP)
+	0x0023 00035 (internals/interfaces.go:15)	LEAQ	"".autotmp_0002+32(SP),BX
+	0x0028 00040 (internals/interfaces.go:15)	NOP	,
+	0x0028 00040 (internals/interfaces.go:15)	MOVQ	$0,(BX)
+	0x002f 00047 (internals/interfaces.go:16)	MOVQ	BX,"".autotmp_0000+40(SP)
+	0x0034 00052 (internals/interfaces.go:16)	MOVQ	go.itab.*"".T."".I+0(SB),AX
+	0x003b 00059 (internals/interfaces.go:16)	MOVQ	$0,BP
+	0x003d 00061 (internals/interfaces.go:16)	CMPQ	AX,BP
+	0x0040 00064 (internals/interfaces.go:16)	JEQ	$1,100
+	0x0042 00066 (internals/interfaces.go:16)	MOVQ	"".autotmp_0000+40(SP),CX
+	0x0047 00071 (internals/interfaces.go:17)	MOVQ	AX,"".i+48(SP)
+	0x004c 00076 (internals/interfaces.go:17)	MOVQ	AX,(SP)
+	0x0050 00080 (internals/interfaces.go:17)	MOVQ	CX,"".i+56(SP)
+	0x0055 00085 (internals/interfaces.go:17)	MOVQ	CX,8(SP)
+	0x005a 00090 (internals/interfaces.go:17)	PCDATA	$0,$0
+	0x005a 00090 (internals/interfaces.go:17)	CALL	,runtime.printiface(SB)
+	0x005f 00095 (internals/interfaces.go:18)	ADDQ	$64,SP
+	0x0063 00099 (internals/interfaces.go:18)	RET	,
+	0x0064 00100 (internals/interfaces.go:16)	MOVQ	$type.*"".T+0(SB),BX
+	0x006b 00107 (internals/interfaces.go:16)	MOVQ	BX,(SP)
+	0x006f 00111 (internals/interfaces.go:16)	MOVQ	$type."".I+0(SB),BX
+	0x0076 00118 (internals/interfaces.go:16)	MOVQ	BX,8(SP)
+	0x007b 00123 (internals/interfaces.go:16)	MOVQ	$go.itab.*"".T."".I+0(SB),BX
+	0x0082 00130 (internals/interfaces.go:16)	MOVQ	BX,16(SP)
+	0x0087 00135 (internals/interfaces.go:16)	PCDATA	$0,$1
+	0x0087 00135 (internals/interfaces.go:16)	CALL	,runtime.typ2Itab(SB)
+	0x008c 00140 (internals/interfaces.go:16)	MOVQ	24(SP),AX
+	0x0091 00145 (internals/interfaces.go:16)	JMP	,66
+	0x0000 65 48 8b 0c 25 00 00 00 00 48 3b 61 10 77 07 e8  eH..%....H;a.w..
+	0x0010 00 00 00 00 eb ea 48 83 ec 40 48 c7 44 24 20 00  ......H..@H.D$ .
+	0x0020 00 00 00 48 8d 5c 24 20 48 c7 03 00 00 00 00 48  ...H.\$ H......H
+	0x0030 89 5c 24 28 48 8b 05 00 00 00 00 31 ed 48 39 e8  .\$(H......1.H9.
+	0x0040 74 22 48 8b 4c 24 28 48 89 44 24 30 48 89 04 24  t"H.L$(H.D$0H..$
+	0x0050 48 89 4c 24 38 48 89 4c 24 08 e8 00 00 00 00 48  H.L$8H.L$......H
+	0x0060 83 c4 40 c3 48 8d 1d 00 00 00 00 48 89 1c 24 48  ..@.H......H..$H
+	0x0070 8d 1d 00 00 00 00 48 89 5c 24 08 48 8d 1d 00 00  ......H.\$.H....
+	0x0080 00 00 48 89 5c 24 10 e8 00 00 00 00 48 8b 44 24  ..H.\$......H.D$
+	0x0090 18 eb af                                         ...
+	rel 5+4 t=9 +0
+	rel 16+4 t=3 runtime.morestack_noctxt+0
+	rel 55+4 t=7 go.itab.*"".T."".I+0
+	rel 91+4 t=3 runtime.printiface+0
+	rel 103+4 t=7 type.*"".T+0
+	rel 114+4 t=7 type."".I+0
+	rel 126+4 t=7 go.itab.*"".T."".I+0
+	rel 136+4 t=3 runtime.typ2Itab+0
+"".I.DoSomeWork t=1 dupok size=80 value=0 args=0x10 locals=0x8
+	0x0000 00000 (<autogenerated>:1)	TEXT	"".I.DoSomeWork+0(SB),34,$8-16
+	0x0000 00000 (<autogenerated>:1)	MOVQ	(TLS),CX
+	0x0009 00009 (<autogenerated>:1)	CMPQ	SP,16(CX)
+	0x000d 00013 (<autogenerated>:1)	JHI	,22
+	0x000f 00015 (<autogenerated>:1)	CALL	,runtime.morestack_noctxt(SB)
+	0x0014 00020 (<autogenerated>:1)	JMP	,0
+	0x0016 00022 (<autogenerated>:1)	SUBQ	$8,SP
+	0x001a 00026 (<autogenerated>:1)	MOVQ	32(CX),BX
+	0x001e 00030 (<autogenerated>:1)	TESTQ	BX,BX
+	0x0021 00033 (<autogenerated>:1)	JEQ	,48
+	0x0023 00035 (<autogenerated>:1)	LEAQ	16(SP),DI
+	0x0028 00040 (<autogenerated>:1)	CMPQ	(BX),DI
+	0x002b 00043 (<autogenerated>:1)	JNE	,48
+	0x002d 00045 (<autogenerated>:1)	MOVQ	SP,(BX)
+	0x0030 00048 (<autogenerated>:1)	NOP	,
+	0x0030 00048 (<autogenerated>:1)	FUNCDATA	$0,gclocals·20671cc48303dfd2b9d73bba3d1850b7+0(SB)
+	0x0030 00048 (<autogenerated>:1)	FUNCDATA	$1,gclocals·3280bececceccd33cb74587feedb1f9f+0(SB)
+	0x0030 00048 (<autogenerated>:1)	MOVQ	""..this+24(FP),BX
+	0x0035 00053 (<autogenerated>:1)	MOVQ	BX,(SP)
+	0x0039 00057 (<autogenerated>:1)	MOVQ	""..this+16(FP),BX
+	0x003e 00062 (<autogenerated>:1)	NOP	,
+	0x003e 00062 (<autogenerated>:1)	MOVQ	32(BX),BX
+	0x0042 00066 (<autogenerated>:1)	PCDATA	$0,$0
+	0x0042 00066 (<autogenerated>:1)	CALL	,BX
+	0x0044 00068 (<autogenerated>:1)	ADDQ	$8,SP
+	0x0048 00072 (<autogenerated>:1)	RET	,
+	0x0000 65 48 8b 0c 25 00 00 00 00 48 3b 61 10 77 07 e8  eH..%....H;a.w..
+	0x0010 00 00 00 00 eb ea 48 83 ec 08 48 8b 59 20 48 85  ......H...H.Y H.
+	0x0020 db 74 0d 48 8d 7c 24 10 48 39 3b 75 03 48 89 23  .t.H.|$.H9;u.H.#
+	0x0030 48 8b 5c 24 18 48 89 1c 24 48 8b 5c 24 10 48 8b  H.\$.H..$H.\$.H.
+	0x0040 5b 20 ff d3 48 83 c4 08 c3                       [ ..H....
+	rel 5+4 t=9 +0
+	rel 16+4 t=3 runtime.morestack_noctxt+0
+	rel 66+0 t=5 +0
+gclocals·3280bececceccd33cb74587feedb1f9f t=7 dupok size=8 value=0
+	0x0000 01 00 00 00 00 00 00 00                          ........
+gclocals·519efd86263089ddb84df3cfe7fd2992 t=7 dupok size=12 value=0
+	0x0000 01 00 00 00 02 00 00 00 02 00 00 00              ............
+go.itab.*"".T."".I t=22 dupok size=8 value=0
+gclocals·61e2515c69061b8fed0e66ece719f936 t=7 dupok size=16 value=0
+	0x0000 02 00 00 00 06 00 00 00 00 00 00 00 02 00 00 00  ................
+gclocals·0115f8d53b75c1696444f08ad03251d9 t=7 dupok size=8 value=0
+	0x0000 02 00 00 00 00 00 00 00                          ........
+"".(*T).DoSomeWork·f t=7 dupok size=8 value=0
+	0x0000 00 00 00 00 00 00 00 00                          ........
+	rel 0+8 t=1 "".(*T).DoSomeWork+0
+"".RunExample·f t=7 dupok size=8 value=0
+	0x0000 00 00 00 00 00 00 00 00                          ........
+	rel 0+8 t=1 "".RunExample+0
+runtime.typ2Itab·f t=7 dupok size=8 value=0
+	0x0000 00 00 00 00 00 00 00 00                          ........
+	rel 0+8 t=1 runtime.typ2Itab+0
+runtime.printiface·f t=7 dupok size=8 value=0
+	0x0000 00 00 00 00 00 00 00 00                          ........
+	rel 0+8 t=1 runtime.printiface+0
+runtime.gcbits.0x000000000000000000000000000000 t=7 dupok size=16 value=0
+	0x0000 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+go.string."internals.T" t=7 dupok size=32 value=0
+	0x0000 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00  ................
+	0x0010 69 6e 74 65 72 6e 61 6c 73 2e 54 00              internals.T.
+	rel 0+8 t=1 go.string."internals.T"+16
+go.string."a" t=7 dupok size=24 value=0
+	0x0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00  ................
+	0x0010 61 00                                            a.
+	rel 0+8 t=1 go.string."a"+16
+go.string."T" t=7 dupok size=24 value=0
+	0x0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00  ................
+	0x0010 54 00                                            T.
+	rel 0+8 t=1 go.string."T"+16
+type."".T t=7 size=176 value=0
+	0x0000 08 00 00 00 00 00 00 00 39 21 dd be 00 08 08 99  ........9!......
+	0x0010 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0040 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0050 01 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00  ................
+	0x0060 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0070 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0080 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0090 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x00a0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	rel 16+8 t=1 runtime.algarray+80
+	rel 24+8 t=1 runtime.gcbits.0x000000000000000000000000000000+0
+	rel 40+8 t=1 go.string."internals.T"+0
+	rel 56+8 t=1 type.*"".T+0
+	rel 64+8 t=1 runtime.zerovalue+0
+	rel 72+8 t=1 type."".T+96
+	rel 96+8 t=1 go.string."a"+0
+	rel 104+8 t=1 go.importpath."".+0
+	rel 112+8 t=1 type.int+0
+	rel 48+8 t=1 type."".T+136
+	rel 136+8 t=1 go.string."T"+0
+	rel 144+8 t=1 go.importpath."".+0
+	rel 152+8 t=1 type."".T+176
+runtime.gcbits.0x88000000000000000000000000000000 t=7 dupok size=16 value=0
+	0x0000 88 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+go.string."*internals.T" t=7 dupok size=32 value=0
+	0x0000 00 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00  ................
+	0x0010 2a 69 6e 74 65 72 6e 61 6c 73 2e 54 00           *internals.T.
+	rel 0+8 t=1 go.string."*internals.T"+16
+go.string."func(*internals.T)" t=7 dupok size=40 value=0
+	0x0000 00 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00  ................
+	0x0010 66 75 6e 63 28 2a 69 6e 74 65 72 6e 61 6c 73 2e  func(*internals.
+	0x0020 54 29 00                                         T).
+	rel 0+8 t=1 go.string."func(*internals.T)"+16
+type.func(*"".T) t=7 dupok size=136 value=0
+	0x0000 08 00 00 00 00 00 00 00 0a ad 1e c4 00 08 08 33  ...............3
+	0x0010 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0040 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0050 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00  ................
+	0x0060 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0070 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0080 00 00 00 00 00 00 00 00                          ........
+	rel 16+8 t=1 runtime.algarray+192
+	rel 24+8 t=1 runtime.gcbits.0x88000000000000000000000000000000+0
+	rel 40+8 t=1 go.string."func(*internals.T)"+0
+	rel 56+8 t=1 go.weak.type.*func(*"".T)+0
+	rel 64+8 t=1 runtime.zerovalue+0
+	rel 80+8 t=1 type.func(*"".T)+128
+	rel 104+8 t=1 type.func(*"".T)+136
+	rel 128+8 t=1 type.*"".T+0
+go.string."DoSomeWork" t=7 dupok size=32 value=0
+	0x0000 00 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00  ................
+	0x0010 44 6f 53 6f 6d 65 57 6f 72 6b 00                 DoSomeWork.
+	rel 0+8 t=1 go.string."DoSomeWork"+16
+go.string."func()" t=7 dupok size=24 value=0
+	0x0000 00 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00  ................
+	0x0010 66 75 6e 63 28 29 00                             func().
+	rel 0+8 t=1 go.string."func()"+16
+type.func() t=7 dupok size=128 value=0
+	0x0000 08 00 00 00 00 00 00 00 f6 bc 82 f6 00 08 08 33  ...............3
+	0x0010 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0040 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0050 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0060 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0070 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	rel 16+8 t=1 runtime.algarray+192
+	rel 24+8 t=1 runtime.gcbits.0x88000000000000000000000000000000+0
+	rel 40+8 t=1 go.string."func()"+0
+	rel 56+8 t=1 go.weak.type.*func()+0
+	rel 64+8 t=1 runtime.zerovalue+0
+	rel 80+8 t=1 type.func()+128
+	rel 104+8 t=1 type.func()+128
+type.*"".T t=7 size=168 value=0
+	0x0000 08 00 00 00 00 00 00 00 fb 8a 90 43 00 08 08 36  ...........C...6
+	0x0010 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0040 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0050 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0060 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00  ................
+	0x0070 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0080 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0090 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x00a0 00 00 00 00 00 00 00 00                          ........
+	rel 16+8 t=1 runtime.algarray+80
+	rel 24+8 t=1 runtime.gcbits.0x88000000000000000000000000000000+0
+	rel 40+8 t=1 go.string."*internals.T"+0
+	rel 56+8 t=1 go.weak.type.**"".T+0
+	rel 64+8 t=1 runtime.zerovalue+0
+	rel 72+8 t=1 type."".T+0
+	rel 48+8 t=1 type.*"".T+80
+	rel 96+8 t=1 type.*"".T+120
+	rel 120+8 t=1 go.string."DoSomeWork"+0
+	rel 136+8 t=1 type.func()+0
+	rel 144+8 t=1 type.func(*"".T)+0
+	rel 152+8 t=1 "".(*T).DoSomeWork+0
+	rel 160+8 t=1 "".(*T).DoSomeWork+0
+gclocals·3280bececceccd33cb74587feedb1f9f t=7 dupok size=8 value=0
+	0x0000 01 00 00 00 00 00 00 00                          ........
+gclocals·20671cc48303dfd2b9d73bba3d1850b7 t=7 dupok size=12 value=0
+	0x0000 01 00 00 00 04 00 00 00 0b 00 00 00              ............
+go.string."*internals.I" t=7 dupok size=32 value=0
+	0x0000 00 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00  ................
+	0x0010 2a 69 6e 74 65 72 6e 61 6c 73 2e 49 00           *internals.I.
+	rel 0+8 t=1 go.string."*internals.I"+16
+type.*"".I t=7 size=80 value=0
+	0x0000 08 00 00 00 00 00 00 00 b1 df 69 5c 00 08 08 36  ..........i\...6
+	0x0010 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0040 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	rel 16+8 t=1 runtime.algarray+80
+	rel 24+8 t=1 runtime.gcbits.0x88000000000000000000000000000000+0
+	rel 40+8 t=1 go.string."*internals.I"+0
+	rel 56+8 t=1 go.weak.type.**"".I+0
+	rel 64+8 t=1 runtime.zerovalue+0
+	rel 72+8 t=1 type."".I+0
+runtime.gcbits.0x8c000000000000000000000000000000 t=7 dupok size=16 value=0
+	0x0000 8c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+go.string."internals.I" t=7 dupok size=32 value=0
+	0x0000 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00  ................
+	0x0010 69 6e 74 65 72 6e 61 6c 73 2e 49 00              internals.I.
+	rel 0+8 t=1 go.string."internals.I"+16
+go.string."I" t=7 dupok size=24 value=0
+	0x0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00  ................
+	0x0010 49 00                                            I.
+	rel 0+8 t=1 go.string."I"+16
+type."".I t=7 size=160 value=0
+	0x0000 10 00 00 00 00 00 00 00 fc 8b 2d 27 00 08 08 14  ..........-'....
+	0x0010 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0040 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0050 01 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00  ................
+	0x0060 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0070 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0080 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0090 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	rel 16+8 t=1 runtime.algarray+240
+	rel 24+8 t=1 runtime.gcbits.0x8c000000000000000000000000000000+0
+	rel 40+8 t=1 go.string."internals.I"+0
+	rel 56+8 t=1 type.*"".I+0
+	rel 64+8 t=1 runtime.zerovalue+0
+	rel 72+8 t=1 type."".I+96
+	rel 96+8 t=1 go.string."DoSomeWork"+0
+	rel 112+8 t=1 type.func()+0
+	rel 48+8 t=1 type."".I+120
+	rel 120+8 t=1 go.string."I"+0
+	rel 128+8 t=1 go.importpath."".+0
+	rel 136+8 t=1 type."".I+160
+go.string."runtime" t=7 dupok size=24 value=0
+	0x0000 00 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00  ................
+	0x0010 72 75 6e 74 69 6d 65 00                          runtime.
+	rel 0+8 t=1 go.string."runtime"+16
+go.importpath.runtime. t=7 dupok size=16 value=0
+	0x0000 00 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00  ................
+	rel 0+8 t=1 go.string."runtime"+16
+"".I.DoSomeWork·f t=7 dupok size=8 value=0
+	0x0000 00 00 00 00 00 00 00 00                          ........
+	rel 0+8 t=1 "".I.DoSomeWork+0
+runtime.zerovalue t=7 dupok size=0 value=0
