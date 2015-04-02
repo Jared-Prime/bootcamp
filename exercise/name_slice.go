@@ -1,18 +1,22 @@
 package exercise
 
 func OrganizeNames(names []string) [][]string {
-	var result [][]string
-	var pos, curSize int
+	maxLength := getMaxLength(names)
+	resultSet := make([][]string, maxLength)
 
 	for _, name := range names {
-		pos = len(name)
-		curSize = len(result)
-		if curSize < pos {
-			newResult := make([][]string, pos)
-			copy(newResult, result)
-			result = newResult
-		}
-		result[pos-1] = append(result[pos-1], name)
+		curPosition := resultSet[len(name)-1]
+		curPosition = append(curPosition, name)
 	}
-	return result
+	return resultSet
+}
+
+func getMaxLength(names []string) int {
+	var maxLength int
+	for _, name := range names {
+		if length := len(name); length > maxLength {
+			maxLength = length
+		}
+	}
+	return maxLength
 }
