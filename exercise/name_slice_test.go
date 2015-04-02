@@ -19,20 +19,25 @@ var (
 		[]string{"Isabella", "Samantha"},
 		[]string{"Elizabeth"},
 	}
-	expectedSize = len(expectedOutputSlice)
+	expectedSize        = len(expectedOutputSlice)
+	expectedSubsetSizes = []int{0, 0, 2, 5, 2, 4, 5, 2, 1}
 )
 
 func TestOrganizeNames(t *testing.T) {
 	resultSlice := OrganizeNames(inputSlice)
-	if size := len(resultSlice); size < expectedSize {
-		t.Errorf("got: %d slices\nexpected: %d", size, expectedSize)
+
+	if actualSize := len(resultSlice); actualSize != expectedSize {
+		t.Errorf("expected result set of size %d, got: %d", expectedSize, actualSize)
 	}
 
-	// @TODO: improve the set comparison, as this is order dependent
-	for i, result := range resultSlice {
-		for j, resultString := range result {
-			if expectedString := expectedOutputSlice[i][j]; expectedString != resultString {
-				t.Errorf("%s does not match %s", resultString, expectedString)
+	for i, subset := range expectedOutputSlice {
+		if actualSize := len(subset); actualSize != expectedSubsetSizes[i] {
+			t.Errorf("expected result subset of size %d, got: %d", expectedSubsetSizes[i], actualSize)
+		}
+
+		for j, name := range resultSlice[i] {
+			if expected := subset[j]; expected != name {
+				t.Errorf("expected: %s, got %s", expected, name)
 			}
 		}
 	}
