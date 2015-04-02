@@ -8,7 +8,7 @@ var (
 	users = []string{
 		"Matthew", "Peter", "Giana", "Adriano", "Elizabeth", "Sarah", "Augustus",
 		"Heidi", "Emilie", "Aaron"}
-	coinCount    = 10
+	coinCount    = 50
 	expectedDist = map[string]int{
 		"Matthew": 2, "Peter": 2, "Giana": 4, "Adriano": 7,
 		"Elizabeth": 5, "Sarah": 2, "Augustus": 10, "Heidi": 5,
