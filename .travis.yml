@@ -1,0 +1,7 @@
+language: go
+
+go:
+  - 1.4.1
+  - tip
+script:
+  - go test github.com/Jared-Prime/bootcamp/exercise
